@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apuntes de Economía (Versión Colorida)</title>
+    <style>
+        /* --- VARIABLES DE COLOR Y FUENTES --- */
+        :root {
+            --bg-main: #f0f4f8; /* Fondo principal claro */
+            --bg-sidebar: #2c3e50; /* Barra lateral oscura */
+            --bg-card: #ffffff; /* Fondo de las tarjetas */
+            --text-dark: #34495e; /* Texto principal oscuro */
+            --text-light: #ecf0f1; /* Texto en la barra lateral */
+            --primary-color: #3498db; /* Azul para títulos */
+            --accent-color-1: #e74c3c; /* Rojo para conceptos clave */
+            --accent-color-2: #f1c40f; /* Amarillo para subtítulos */
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --border-color: #dfe6e9;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background-color: var(--bg-main);
+            display: flex;
+            margin: 0;
+        }
+        
+        /* --- BARRA LATERAL DE NAVEGACIÓN --- */
+        #sidebar {
+            width: 260px;
+            background-color: var(--bg-sidebar);
+            color: var(--text-light);
+            padding: 25px;
+            height: 100vh;
+            position: fixed;
+            overflow-y: auto;
+            border-right: 4px solid var(--primary-color);
+        }
+        #sidebar h2 {
+            margin-top: 0;
+            color: var(--text-light);
+            font-size: 1.5em;
+            text-align: center;
+            border-bottom: 2px solid var(--accent-color-2);
+            padding-bottom: 15px;
+        }
+        #sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        #sidebar ul li a {
+            text-decoration: none;
+            color: var(--text-light);
+            display: block;
+            padding: 12px 15px;
+            border-radius: 6px;
+            margin-bottom: 5px;
+            transition: all 0.3s ease;
+        }
+        #sidebar ul li a:hover {
+            background-color: var(--primary-color);
+            transform: translateX(5px);
+        }
+        
+        /* --- CONTENIDO PRINCIPAL --- */
+        #main-content {
+            flex-grow: 1;
+            padding: 30px 50px;
+            margin-left: 280px;
+        }
+
+        h1 {
+            color: var(--bg-sidebar);
+            font-size: 2.8em;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        /* --- TARJETAS DE CONTENIDO --- */
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-left: 6px solid var(--primary-color);
+            border-radius: 10px;
+            padding: 25px 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px var(--shadow-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px var(--shadow-color);
+        }
+
+        .card h2 {
+            color: var(--primary-color);
+            font-size: 1.8em;
+            margin-top: 0;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: var(--text-dark);
+            font-weight: 600;
+            margin-top: 25px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        
+        /* --- RESALTADO DE TEXTO IMPORTANTE --- */
+        strong {
+            color: var(--accent-color-1);
+            font-weight: 700;
+        }
+
+        ul {
+            padding-left: 20px;
+            list-style-type: '👉 ';
+        }
+        ol {
+            padding-left: 25px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+<nav id="sidebar">
+    <h2>🚀 Menú de Economía</h2>
+    <ul>
+        <li><a href="#que-es-economia">1. ¿Qué es la Economía?</a></li>
+        <li><a href="#recursos-bienes-necesidades">2. Recursos y Bienes</a></li>
+        <li><a href="#tipos-bienes">3. Tipos de Bienes</a></li>
+        <li><a href="#caracteristicas-necesidades">4. Características Necesidades</a></li>
+        <li><a href="#clasificacion-necesidades">5. Clasificación Necesidades</a></li>
+        <li><a href="#escasez-economica">6. La Escasez Económica</a></li>
+        <li><a href="#toma-decisiones">7. Toma de Decisiones</a></li>
+        <li><a href="#metodo-cientifico">8. El Método Científico</a></li>
+        <li><a href="#economia-conductual">9. Economía Conductual</a></li>
+        <li><a href="#ramas-economia">10. Ramas de la Economía</a></li>
+        <li><a href="#factores-productivos">11. Factores Productivos</a></li>
+        <li><a href="#problemas-economicos">12. Problemas Económicos</a></li>
+        <li><a href="#bienestar">13. Bienestar Social</a></li>
+        <li><a href="#interaccion-economia">14. Interacción Económica</a></li>
+        <li><a href="#fpp">15. Frontera de Posibilidades</a></li>
+        <li><a href="#ventaja-comparativa">16. Ventaja Comparativa</a></li>
+        <li><a href="#agentes-economicos">17. Agentes Económicos</a></li>
+    </ul>
+</nav>
+
+<div id="main-content">
+    <h1>Apuntes de Economía 📈</h1>
+
+    <div id="que-es-economia" class="card">
+        <h2>1. ¿Qué es la Economía? 🧠</h2>
+        <p>La <strong>economía</strong> es la ciencia que estudia el mejor modo de administrar unos <strong>recursos que son escasos</strong> para satisfacer la mayor cantidad posible de las <strong>necesidades</strong> de la sociedad.</p>
+        <p>Se le conoce como la ciencia de la <strong>escasez y la elección</strong>. Sin escasez, no habría necesidad de elegir ni de administrar, por lo que la economía no existiría.</p>
+        <h3>Aspectos Clave:</h3>
+        <ul>
+            <li><strong>Recursos escasos:</strong> Dinero y tiempo limitados.</li>
+            <li><strong>Necesidades ilimitadas:</strong> Las necesidades se reproducen constantemente y nunca podremos satisfacerlas todas.</li>
+            <li><strong>Necesidad de elegir:</strong> Al no poder tenerlo todo, debemos tomar decisiones.</li>
+        </ul>
+    </div>
+
+    <div id="recursos-bienes-necesidades" class="card">
+        <h2>2. Recursos, Bienes y Necesidades 🛠️</h2>
+        <ul>
+            <li><strong>Recursos:</strong> Permiten producir bienes y servicios. Son los recursos naturales, los trabajadores y el capital físico (máquinas, herramientas).</li>
+            <li><strong>Bienes y Servicios:</strong> Aquello que satisface una necesidad. Los <strong>bienes</strong> son productos (ropa, comida) y los <strong>servicios</strong> son provistos por personas (un partido de fútbol).</li>
+            <li><strong>Necesidad:</strong> Es la sensación de carencia unida al deseo de eliminarla.</li>
+        </ul>
+    </div>
+
+    <div id="tipos-bienes" class="card">
+        <h2>3. Tipos de Bienes y Servicios 🎁</h2>
+        <p>Se clasifican según varios criterios:</p>
+        <ul>
+            <li><strong>Según su disponibilidad:</strong>
+                <ul>
+                    <li><strong>Libres:</strong> Abundantes y gratuitos (ej. aire).</li>
+                    <li><strong>Económicos:</strong> Escasos y de pago.</li>
+                </ul>
+            </li>
+            <li><strong>Según su uso:</strong>
+                <ul>
+                    <li><strong>De consumo:</strong> Satisfacen directamente una necesidad.</li>
+                    <li><strong>De capital:</strong> Sirven para producir otros bienes.</li>
+                </ul>
+            </li>
+            <li><strong>Según su relación:</strong>
+                <ul>
+                    <li><strong>Sustitutivos:</strong> Cubren la misma necesidad (ej. Coca-Cola y Pepsi).</li>
+                    <li><strong>Complementarios:</strong> Deben usarse conjuntamente (ej. coche y gasolina).</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div id="clasificacion-necesidades" class="card">
+        <h2>5. Clasificación de las Necesidades ιε</h2>
+        <h3>Según su importancia:</h3>
+        <ul>
+            <li><strong>Primarias:</strong> Necesarias para sobrevivir (alimentación, vivienda).</li>
+            <li><strong>Secundarias:</strong> Aumentan el bienestar (viajar, ocio).</li>
+        </ul>
+        <h3>La Pirámide de Maslow:</h3>
+        <p>Maslow jerarquiza las necesidades en 5 niveles. No sentimos las de un nivel superior hasta tener cubiertas las del inferior.</p>
+        <ol>
+            <li><strong>Fisiológicas:</strong> Respirar, comer, descansar.</li>
+            <li><strong>Seguridad:</strong> Seguridad física, de empleo, de salud.</li>
+            <li><strong>Sociales:</strong> Amistad, afecto.</li>
+            <li><strong>Reconocimiento:</strong> Respeto, confianza, autoestima.</li>
+            <li><strong>Autorrealización:</strong> Desarrollo del potencial.</li>
+        </ol>
+    </div>
+
+    <div id="toma-decisiones" class="card">
+        <h2>7. ¿Cómo Toman Decisiones los Individuos? 🤔</h2>
+        <ul>
+            <li><strong>Coste de Oportunidad:</strong> Es aquello a lo que se <strong>renuncia</strong> al tomar una decisión. Por ejemplo, el coste de estudiar es el salario que dejas de ganar por no trabajar.</li>
+            <li><strong>Costes Irrecuperables:</strong> Son costes del pasado que <strong>no deben influir</strong> en decisiones futuras. ¡A lo hecho, pecho!.</li>
+            <li><strong>Análisis Marginal:</strong> Compara los beneficios y costes adicionales de repetir una acción. Se repite si el <strong>beneficio marginal > coste marginal</strong>.</li>
+            <li><strong>Incentivos:</strong> Es todo aquello que modifica los beneficios o costes de una decisión, pudiendo alterarla. Pueden ser recompensas (positivos) o castigos (negativos).</li>
+        </ul>
+    </div>
+
+    <div id="economia-conductual" class="card">
+        <h2>9. Economía Conductual (Psicología y Economía) 🧠💡</h2>
+        <p>Integra la psicología en la economía. Reconoce que las personas <strong>no siempre son racionales</strong>, se preocupan por la justicia y son impacientes a corto plazo.</p>
+        <h3>Sesgos Cognitivos Comunes:</h3>
+        <ul>
+            <li><strong>Efecto Ancla:</strong> Dar demasiada importancia a la primera información recibida.</li>
+            <li><strong>Efecto Manada:</strong> Hacer cosas porque otros las hacen.</li>
+            <li><strong>Aversión a las Pérdidas:</strong> Preferir evitar una pérdida antes que obtener una ganancia equivalente.</li>
+            <li><strong>Efecto Dotación:</strong> Valorar más un bien por el simple hecho de poseerlo.</li>
+        </ul>
+    </div>
+
+     <div id="ramas-economia" class="card">
+        <h2>10. Las Ramas de la Economía 🌳</h2>
+        <ul>
+            <li><strong>Economía Positiva:</strong> Describe "lo que es". Es objetiva y se basa en datos.
+                <ul>
+                    <li><strong>Microeconomía:</strong> Estudia las decisiones individuales de familias y empresas.</li>
+                    <li><strong>Macroeconomía:</strong> Estudia la economía en su conjunto (PIB, desempleo, inflación).</li>
+                </ul>
+            </li>
+            <li><strong>Economía Normativa:</strong> Opina sobre "lo que debería ser". Es subjetiva y se basa en juicios de valor.</li>
+        </ul>
+    </div>
+
+    <div id="fpp" class="card">
+        <h2>15. La Frontera de Posibilidades de Producción (FPP) 📊</h2>
+        <p>Es un modelo que muestra la <strong>cantidad máxima de dos bienes</strong> que una economía puede producir con los recursos y la tecnología disponibles.</p>
+        <ul>
+            <li><strong>Puntos sobre la FPP:</strong> Son <strong>eficientes</strong>. Se usan todos los recursos de la mejor manera.</li>
+            <li><strong>Puntos debajo de la FPP:</strong> Son <strong>ineficientes</strong>. Hay recursos sin utilizar o mal utilizados.</li>
+            <li><strong>Puntos fuera de la FPP:</strong> Son <strong>inalcanzables</strong> con la tecnología y recursos actuales.</li>
+        </ul>
+        <p>El <strong>crecimiento económico</strong> se representa como un desplazamiento de la FPP hacia la derecha.</p>
+    </div>
+
+    <div id="agentes-economicos" class="card">
+        <h2>17. Los Agentes Económicos 👨‍👩‍👧‍👦🏢🏛️</h2>
+        <p>Son quienes toman las decisiones económicas.</p>
+        <ul>
+            <li><strong>Familias:</strong> Consumen bienes y servicios y son dueñas de los factores productivos. Su objetivo es maximizar su satisfacción.</li>
+            <li><strong>Empresas:</strong> Producen bienes y servicios. Su objetivo es maximizar su beneficio.</li>
+            <li><strong>Sector Público:</strong> Regula la economía y busca el bienestar de la sociedad (eficiencia, equidad, estabilidad).</li>
+        </ul>
+    </div>
+
+</div>
+
+</body>
+</html>
